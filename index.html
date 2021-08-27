@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Funnel</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <form class="question-form" action="#">
+        <div class="questions">
+            <img src="./pmlquizlogo.png" alt="logo" class="logo">
+            <div class="progress-bar">
+                <div class="completed"></div>
+            </div>
+
+            <div class="question-box q1 active-question">
+                <strong class="questions-counter">
+                    question 1 of 7
+                </strong>
+                <h1>How Can we help you?</h1>
+                <ul class="opt-list">
+                    <li class="answer-btn q1-purchase">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Purchase</span>
+                    </li>
+                    <li class="answer-btn q1-refinance">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Refinance</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question-box q2">
+                <strong class="questions-counter">
+                    question 2 of 7
+                    <button class="back-button q2-back" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" class="back-button-icon">
+                            <path d="M21.821 7.074L16.118.285A.844.844 0 0 0 14.966.18c-.33.268-.382.806-.109 1.13l4.596 5.478H.815A.807.807 0 0 0 0 7.586c0 .44.365.798.815.798h18.638l-4.596 5.479c-.273.323-.218.857.109 1.129.344.287.878.217 1.152-.106l5.703-6.789c.255-.388.221-.68 0-1.023z"></path>
+                        </svg>
+                    </button>
+                </strong>
+                <h1>Property Type?</h1>
+                <ul class="opt-list">
+                    <li class="answer-btn q2-single-family">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Single Family</span>
+                    </li>
+                    <li class="answer-btn q2-2to4">
+                        <div class="select-icon"></div>
+                        <span class="question-text">2-4 Unit</span>
+                    </li>
+                    <li class="answer-btn q2-condo">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Condo</span>
+                    </li>
+                    <li class="answer-btn q2-town-house">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Town House</span>
+                    </li>
+                    <li class="answer-btn q2-other">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Other</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question-box q3">
+                <strong class="questions-counter">
+                    question 3 of 7
+                    <button class="back-button q3-back" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" class="back-button-icon">
+                            <path d="M21.821 7.074L16.118.285A.844.844 0 0 0 14.966.18c-.33.268-.382.806-.109 1.13l4.596 5.478H.815A.807.807 0 0 0 0 7.586c0 .44.365.798.815.798h18.638l-4.596 5.479c-.273.323-.218.857.109 1.129.344.287.878.217 1.152-.106l5.703-6.789c.255-.388.221-.68 0-1.023z"></path>
+                        </svg>
+                    </button>
+                </strong>
+                <h1>Property Location?</h1>
+                <div class="text-input-box">
+                    <input type="text" class="location-input" placeholder="Ex. Salem, NH">
+                    <button class="not-sure-btn" type="button">Not Sure?</button>
+                    <button class="next-button q3-next-btn" type="button">Next →</button>
+                </div>
+            </div>
+
+            <div class="question-box q4">
+                <strong class="questions-counter">
+                    question 4 of 7
+                    <button class="back-button q4-back" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" class="back-button-icon">
+                            <path d="M21.821 7.074L16.118.285A.844.844 0 0 0 14.966.18c-.33.268-.382.806-.109 1.13l4.596 5.478H.815A.807.807 0 0 0 0 7.586c0 .44.365.798.815.798h18.638l-4.596 5.479c-.273.323-.218.857.109 1.129.344.287.878.217 1.152-.106l5.703-6.789c.255-.388.221-.68 0-1.023z"></path>
+                        </svg>
+                    </button>
+                </strong>
+                <h1>Desired Loan Amount?</h1>
+                <div class="text-input-box">
+                    <input type="text" class="amount-input" placeholder="Ex. $250,000">
+
+                    <button class="next-button q4-next-btn" type="button">Next →</button>
+                </div>
+            </div>
+
+            <div class="question-box q5">
+                <strong class="questions-counter">
+                    question 5 of 7
+                    <button class="back-button q5-back" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" class="back-button-icon">
+                            <path d="M21.821 7.074L16.118.285A.844.844 0 0 0 14.966.18c-.33.268-.382.806-.109 1.13l4.596 5.478H.815A.807.807 0 0 0 0 7.586c0 .44.365.798.815.798h18.638l-4.596 5.479c-.273.323-.218.857.109 1.129.344.287.878.217 1.152-.106l5.703-6.789c.255-.388.221-.68 0-1.023z"></path>
+                        </svg>
+                    </button>
+                </strong>
+                <h1>Employment status?</h1>
+                <ul class="opt-list">
+                    <li class="answer-btn q5-employed">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Employed</span>
+                    </li>
+                    <li class="answer-btn q5-not-employed">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Not Employed</span>
+                    </li>
+                    <li class="answer-btn q5-self-employed">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Self Employed</span>
+                    </li>
+                    <li class="answer-btn q5-military">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Military</span>
+                    </li>
+                    <li class="answer-btn q5-retired">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Retired</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question-box q6">
+                <strong class="questions-counter">
+                    question 6 of 7
+                    <button class="back-button q6-back" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" class="back-button-icon">
+                            <path d="M21.821 7.074L16.118.285A.844.844 0 0 0 14.966.18c-.33.268-.382.806-.109 1.13l4.596 5.478H.815A.807.807 0 0 0 0 7.586c0 .44.365.798.815.798h18.638l-4.596 5.479c-.273.323-.218.857.109 1.129.344.287.878.217 1.152-.106l5.703-6.789c.255-.388.221-.68 0-1.023z"></path>
+                        </svg>
+                    </button>
+                </strong>
+                <h1>Estimate Your Credit Score</h1>
+                <ul class="opt-list">
+                    <li class="answer-btn q6-excellent">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Excellent 740+</span>
+                    </li>
+                    <li class="answer-btn q6-good">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Good 700-739</span>
+                    </li>
+                    <li class="answer-btn q6-average">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Average 660-699</span>
+                    </li>
+                    <li class="answer-btn q6-fair">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Fair 600-659</span>
+                    </li>
+                    <li class="answer-btn q6-under">
+                        <div class="select-icon"></div>
+                        <span class="question-text">Under 600</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="question-box q7">
+                <strong class="questions-counter">
+                    question 7 of 7
+                    <button class="back-button q7-back" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" class="back-button-icon">
+                            <path d="M21.821 7.074L16.118.285A.844.844 0 0 0 14.966.18c-.33.268-.382.806-.109 1.13l4.596 5.478H.815A.807.807 0 0 0 0 7.586c0 .44.365.798.815.798h18.638l-4.596 5.479c-.273.323-.218.857.109 1.129.344.287.878.217 1.152-.106l5.703-6.789c.255-.388.221-.68 0-1.023z"></path>
+                        </svg>
+                    </button>
+                </strong>
+                <h1>Let's Get to Know You</h1>
+                <div class="text-input-box">
+                    <input type="text" class="name-input" placeholder="Full Name" name="name">
+                    <span class="warning-text-name">Please Enter Your Full Name</span>
+                    <input type="text" class="email-input" placeholder="Email" name="email">
+                    <span class="warning-text-email">Please Enter a Valid Email</span>
+                    <input type="text" class="phone-input" placeholder="Phone Number" name="phone">
+
+                    <button class="next-button q7-submit-btn" type="button">Submit →</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCTRdKsDr3i7M8O174iKDqVT6COPBcYg0M",
+            authDomain: "yt-ad-funnel.firebaseapp.com",
+            projectId: "yt-ad-funnel",
+            storageBucket: "yt-ad-funnel.appspot.com",
+            messagingSenderId: "937159665448",
+            appId: "1:937159665448:web:fe078ee753fd7ac8eb121d",
+            measurementId: "G-Y3YVZ85JW0"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
+
+<!-- <div class="slider-box">
+                    <input type="range" min="600" max="820" value="710" class="slider">
+                </div> -->
