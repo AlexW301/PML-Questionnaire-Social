@@ -1,15 +1,30 @@
-// document.querySelectorAll('.answer-btn').forEach(function(el) {
-//     el.addEventListener('click', function () {
-//         console.log('dfsfdfsdf')
-//     })
-// })
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore, collection, doc, addDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDsF7he819jZhi_IuRygyxWeLTHSokP5Wc",
+  authDomain: "pml-social-media-questionnaire.firebaseapp.com",
+  projectId: "pml-social-media-questionnaire",
+  storageBucket: "pml-social-media-questionnaire.appspot.com",
+  messagingSenderId: "552499757241",
+  appId: "1:552499757241:web:2f9193ef180d1d13bddb68",
+  measurementId: "G-D047B3D16V"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
 // FORM DATA
-
 let formData = []
 formData.length = 7;
-
 
 // FUNNEL QUESTIONS
 
@@ -233,7 +248,8 @@ document.querySelector('.q6-under').onclick = () => {
 
 // QUESTION #2 LETS GET TO KNOW YOU #7
 
-document.querySelector('.q7-submit-btn').onclick = () => {
+
+document.querySelector('.q7-submit-btn').onclick = async () => {
     //Grab input info
     let fullName = document.querySelector('.name-input').value
     let email = document.querySelector('.email-input').value
@@ -248,7 +264,7 @@ document.querySelector('.q7-submit-btn').onclick = () => {
         //
         document.querySelector('.completed').style.width = '100%';
         //Send the data to firebase
-        firebase.firestore().collection("completed-funnels").add({
+        const docRef = await addDoc(collection(db, "completed-funnels"), {
             firstName: formData[6][0],
             lastName: formData[6][1],
             email: formData[6][2],
@@ -260,15 +276,11 @@ document.querySelector('.q7-submit-btn').onclick = () => {
             employment: formData[4],
             credit: formData[5],
             date: Date()
-        }).then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
-            // GO TO FINISH PAGE
-            window.location.href = '/finished.html'
         })
-            .catch((error) => {
-                console.error("Error adding document: ", error);
-            });
-
+          console.log("Document written with ID: ", docRef.id)
+          if(docRef) {
+            window.location.href = '/finished.html'
+          }
 
     } if (fullName.indexOf(' ') === -1) {
         document.querySelector('.warning-text-name').style.display = 'block'
@@ -284,57 +296,6 @@ document.querySelector('.name-input').onclick = () => {
 document.querySelector('.email-input').onclick = () => {
     document.querySelector('.warning-text-email').style.display = 'none'
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // QUESTION #7 DESIRED LOAN AMOUNT
-
-// document.querySelector('.q7-submit-btn').onclick = () => {
-//     //Grab input info
-//     let loanAmount = document.querySelector('.amount-input').value
-//     if (loanAmount != '') {
-//         //update last item in array
-//         formData[6] = loanAmount
-//         //Send the data to firebase
-//         firebase.firestore().collection("completed-funnels").add({
-//             firstName: formData[1][0],
-//             lastName: formData[1][1],
-//             email: formData[1][2],
-//             phone: formData[1][3],
-//             purchaseOrRefi: formData[0],
-//             credit: formData[2],
-//             employment: formData[3],
-//             location: formData[4],
-//             propertyType: formData[5],
-//             loanAmount: formData[6],
-//             date: Date()
-//         }).then((docRef) => {
-//             console.log("Document written with ID: ", docRef.id);
-//         })
-//             .catch((error) => {
-//                 console.error("Error adding document: ", error);
-//             });
-//         //Go to the next screen
-//         document.querySelector('.q7').classList.remove('active-question')
-//         //Show next question
-//         document.querySelector('.q8').classList.add('active-question')
-//         document.querySelector('.completed').style.width = '100%';
-//     }
-// }
-
 
 // BACK BUTTONS
 
